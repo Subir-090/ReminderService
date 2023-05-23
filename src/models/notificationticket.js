@@ -16,6 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       status: {
         type: DataTypes.ENUM,
         allowNull: false,
+        values: ["PENDING","SUCCESS","FAILED"],
+        defaultValue: "PENDING"
       },
       recipientEmail: {
         type: DataTypes.STRING,
